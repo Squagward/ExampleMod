@@ -1,5 +1,6 @@
 package com.squagward.examplemod.config
 
+import gg.essential.universal.UChat
 import gg.essential.vigilance.Vigilant
 import gg.essential.vigilance.data.Property
 import gg.essential.vigilance.data.PropertyType
@@ -13,4 +14,12 @@ class ExampleConfig : Vigilant(File("./config/ExampleMod.toml"), "Example Mod Se
         category = "General"
     )
     var toggleMod = true
+
+    init {
+        initialize()
+
+        registerListener<Any>("toggleMod") {
+            UChat.chat("&6Toggled Example Mod ${if (toggleMod) "&aON" else "&cOFF"}")
+        }
+    }
 }
