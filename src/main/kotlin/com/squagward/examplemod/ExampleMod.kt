@@ -6,12 +6,9 @@ import net.fabricmc.api.ClientModInitializer
 import net.minecraft.client.MinecraftClient
 
 object ExampleMod : ClientModInitializer {
-    var config: ExampleConfig? = null
-
     override fun onInitializeClient() {
         MinecraftClient.getInstance().send {
-            config = ExampleConfig()
-            config?.preload()
+            ExampleConfig.preload()
 
             ExampleCommand.register()
         }

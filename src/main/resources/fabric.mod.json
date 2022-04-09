@@ -8,8 +8,8 @@
     "Squagward"
   ],
   "contact": {
-    "website": "https://github.com/Squagward/ExampleMod",
-    "repo": "https://github.com/Squagward/ExampleMod"
+    "homepage": "https://github.com/Squagward/ExampleMod",
+    "issues": "https://github.com/Squagward/ExampleMod/issues"
   },
   "license": "The Unlicense",
   "environment": "client",

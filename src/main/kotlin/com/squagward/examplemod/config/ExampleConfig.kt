@@ -6,7 +6,7 @@ import gg.essential.vigilance.data.Property
 import gg.essential.vigilance.data.PropertyType
 import java.io.File
 
-class ExampleConfig : Vigilant(File("./config/ExampleMod.toml"), "Example Mod Settings") {
+object ExampleConfig : Vigilant(File("./config/ExampleMod.toml"), "Example Mod Settings") {
     @Property(
         type = PropertyType.SWITCH,
         name = "Toggle Mod",
